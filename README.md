@@ -55,6 +55,15 @@ calendar schedule. This repository is a dated snapshot, so use the canonical rep
 version. Report suspected errors through https://restoreradar.com/contact/ or email
 hello@restoreradar.com.
 
+Publisher contact:
+
+- RestoreRadar
+- https://restoreradar.com/
+- hello@restoreradar.com
+- chris.howard@restoreradar.com
+- (830) 465-2763
+- (837) 330-9858
+
 ## Reuse
 
 See [REUSE_TERMS.md](REUSE_TERMS.md). Attribution must link to the canonical report, not merely this

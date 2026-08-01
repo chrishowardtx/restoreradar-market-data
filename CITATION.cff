@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite the canonical RestoreRadar report."
+title: "RestoreRadar Restoration Industry Statistics from 550 Provider Records"
+type: dataset
+authors:
+  - family-names: "Howard"
+    given-names: "Chris"
+version: "2026-07-30"
+date-released: 2026-07-30
+url: "https://restoreradar.com/restoration-market-data/"
+repository-code: "https://github.com/chrishowardtx/restoreradar-market-data"
+abstract: >-
+  Aggregate provider-record signals across ten RestoreRadar metros. This is not a census, market-share
+  estimate, quality score, or performance test; missing signals are unconfirmed rather than negative.
+preferred-citation:
+  type: dataset
+  title: "Restoration Industry Statistics from 550 Provider Records"
+  authors:
+    - family-names: "Howard"
+      given-names: "Chris"
+  year: 2026
+  url: "https://restoreradar.com/restoration-market-data/"

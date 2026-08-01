@@ -1,0 +1,403 @@
+{
+  "schema_version": "1.1",
+  "title": "RestoreRadar restoration industry statistics from 550 published provider records",
+  "publisher": "RestoreRadar",
+  "url": "https://restoreradar.com/restoration-market-data/",
+  "license_url": "https://restoreradar.com/restoration-market-data/#reuse-terms",
+  "methodology_url": "https://restoreradar.com/restoration-market-data/#methodology",
+  "data_dictionary_url": "https://restoreradar.com/restoration-market-data/#data-dictionary",
+  "verification_standard_url": "https://restoreradar.com/verification-standard/",
+  "date_modified": "2026-07-30",
+  "citation": "RestoreRadar, “Restoration Industry Statistics from 550 Provider Records,” updated 2026-07-30, https://restoreradar.com/restoration-market-data/",
+  "update_frequency": "Recomputed with each published RestoreRadar data refresh; no fixed calendar schedule.",
+  "reuse_terms": "RestoreRadar grants permission to use, analyze, quote, and redistribute these aggregate files, including modified extracts, with attribution to RestoreRadar and a link to the report. This permission covers RestoreRadar’s aggregation and presentation only; it does not grant rights in underlying third-party source data, provider names, logos, or trademarks. Preserve the published limitations when reporting comparisons.",
+  "coverage_note": "Aggregate signals from the independent restoration provider listings currently published by RestoreRadar across its covered metros.",
+  "limitations": [
+    "This is not a census of every restoration company operating in each metro.",
+    "A missing signal means RestoreRadar did not confirm it; it does not establish that a provider lacks the attribute.",
+    "Provider-stated 24/7 response and direct insurance billing are statements observed on provider websites, not independent performance tests.",
+    "Service rows overlap because one provider may list more than one restoration service."
+  ],
+  "source_classes": [
+    {
+      "id": "provider_websites",
+      "name": "Provider websites",
+      "supports": [
+        "service classification",
+        "provider-stated 24/7 response",
+        "provider-stated direct insurance billing"
+      ],
+      "boundary": "Attributed provider statements only; not independent tests of availability, response time, or claims handling."
+    },
+    {
+      "id": "google_business_profiles",
+      "name": "Public Google Business Profiles",
+      "url": "https://www.google.com/maps",
+      "supports": [
+        "public rating",
+        "public review count",
+        "matched public business location"
+      ],
+      "boundary": "Included only after the business identity is matched; ratings and review counts do not verify quality or future performance."
+    },
+    {
+      "id": "iicrc_global_locator",
+      "name": "IICRC Global Locator",
+      "url": "https://locator.iicrc.org/",
+      "supports": [
+        "IICRC Certified Firm match"
+      ],
+      "boundary": "A missing match is unconfirmed, not proof that a provider lacks training or certification."
+    },
+    {
+      "id": "state_mold_credentials",
+      "name": "Official state mold-credential sources",
+      "urls": [
+        "https://www.tdlr.texas.gov/LicenseSearch/",
+        "https://www.myfloridalicense.com/wl11.asp",
+        "https://arlspublic.lslbc.louisiana.gov/Public/ClientSearch"
+      ],
+      "supports": [
+        "eligible named state mold credential"
+      ],
+      "boundary": "Credential type and scope differ by state; provider-specific receipts carry the narrower claim and limitation."
+    }
+  ],
+  "data_dictionary": [
+    {
+      "field": "metro_slug",
+      "type": "string",
+      "applies_to": [
+        "metros"
+      ],
+      "definition": "Canonical RestoreRadar path slug for the covered metro."
+    },
+    {
+      "field": "city",
+      "type": "string",
+      "applies_to": [
+        "metros"
+      ],
+      "definition": "Primary city name used for the RestoreRadar metro."
+    },
+    {
+      "field": "state",
+      "type": "string",
+      "applies_to": [
+        "metros"
+      ],
+      "definition": "Two-letter U.S. state abbreviation."
+    },
+    {
+      "field": "service_slug",
+      "type": "string",
+      "applies_to": [
+        "services"
+      ],
+      "definition": "Canonical RestoreRadar path slug for the restoration service."
+    },
+    {
+      "field": "service",
+      "type": "string",
+      "applies_to": [
+        "services"
+      ],
+      "definition": "Reader-facing restoration service name."
+    },
+    {
+      "field": "metros_represented",
+      "type": "integer",
+      "minimum": 0,
+      "applies_to": [
+        "services"
+      ],
+      "definition": "Covered metros containing at least one listed provider record classified for the service."
+    },
+    {
+      "field": "listed_providers",
+      "type": "integer",
+      "minimum": 0,
+      "applies_to": [
+        "totals",
+        "metros",
+        "services"
+      ],
+      "definition": "Published RestoreRadar provider records in the stated slice; not a census of all operating companies."
+    },
+    {
+      "field": "provider_stated_24_7",
+      "type": "integer",
+      "minimum": 0,
+      "applies_to": [
+        "totals",
+        "metros",
+        "services"
+      ],
+      "definition": "Listed records whose provider website states 24/7 response; not an independent availability or response-time test."
+    },
+    {
+      "field": "provider_stated_insurance_direct_billing",
+      "type": "integer",
+      "minimum": 0,
+      "applies_to": [
+        "totals",
+        "metros",
+        "services"
+      ],
+      "definition": "Listed records whose provider website states direct insurance billing; not an independent claims-handling test."
+    },
+    {
+      "field": "google_rated_listings",
+      "type": "integer",
+      "minimum": 0,
+      "applies_to": [
+        "totals",
+        "metros",
+        "services"
+      ],
+      "definition": "Listed records with a public Google rating attached to a matched business identity."
+    },
+    {
+      "field": "google_review_total",
+      "type": "integer",
+      "minimum": 0,
+      "applies_to": [
+        "totals",
+        "metros",
+        "services"
+      ],
+      "definition": "Sum of public Google review counts represented by the matched rated listings; individual reviews are not included."
+    },
+    {
+      "field": "domain_matched_google_business_locations",
+      "type": "integer",
+      "minimum": 0,
+      "applies_to": [
+        "totals",
+        "metros",
+        "services"
+      ],
+      "definition": "Listed records with a Google Business location matched by website domain or another approved identity key."
+    },
+    {
+      "field": "iicrc_certified_firms",
+      "type": "integer",
+      "minimum": 0,
+      "applies_to": [
+        "totals",
+        "metros",
+        "services"
+      ],
+      "definition": "Listed records matched to a current IICRC Certified Firm entry under RestoreRadar verification rules."
+    },
+    {
+      "field": "official_state_mold_credentials",
+      "type": "integer",
+      "minimum": 0,
+      "applies_to": [
+        "totals",
+        "metros",
+        "services"
+      ],
+      "definition": "Listed records with an eligible mold credential matched in an official Texas, Florida, or Louisiana state source; the credential scope differs by state."
+    }
+  ],
+  "totals": {
+    "listed_providers": 550,
+    "provider_stated_24_7": 467,
+    "provider_stated_insurance_direct_billing": 332,
+    "google_rated_listings": 505,
+    "google_review_total": 48200,
+    "domain_matched_google_business_locations": 523,
+    "iicrc_certified_firms": 176,
+    "official_state_mold_credentials": 61,
+    "metros": 10,
+    "services": 4
+  },
+  "metros": [
+    {
+      "metro_slug": "houston-tx",
+      "city": "Houston",
+      "state": "TX",
+      "listed_providers": 120,
+      "provider_stated_24_7": 105,
+      "provider_stated_insurance_direct_billing": 71,
+      "google_rated_listings": 115,
+      "google_review_total": 12817,
+      "domain_matched_google_business_locations": 116,
+      "iicrc_certified_firms": 39,
+      "official_state_mold_credentials": 19
+    },
+    {
+      "metro_slug": "dallas-tx",
+      "city": "Dallas",
+      "state": "TX",
+      "listed_providers": 90,
+      "provider_stated_24_7": 77,
+      "provider_stated_insurance_direct_billing": 57,
+      "google_rated_listings": 87,
+      "google_review_total": 7320,
+      "domain_matched_google_business_locations": 89,
+      "iicrc_certified_firms": 34,
+      "official_state_mold_credentials": 14
+    },
+    {
+      "metro_slug": "tampa-fl",
+      "city": "Tampa",
+      "state": "FL",
+      "listed_providers": 77,
+      "provider_stated_24_7": 67,
+      "provider_stated_insurance_direct_billing": 46,
+      "google_rated_listings": 73,
+      "google_review_total": 8858,
+      "domain_matched_google_business_locations": 75,
+      "iicrc_certified_firms": 28,
+      "official_state_mold_credentials": 1
+    },
+    {
+      "metro_slug": "new-orleans-la",
+      "city": "New Orleans",
+      "state": "LA",
+      "listed_providers": 26,
+      "provider_stated_24_7": 16,
+      "provider_stated_insurance_direct_billing": 10,
+      "google_rated_listings": 21,
+      "google_review_total": 1463,
+      "domain_matched_google_business_locations": 23,
+      "iicrc_certified_firms": 4,
+      "official_state_mold_credentials": 7
+    },
+    {
+      "metro_slug": "austin-tx",
+      "city": "Austin",
+      "state": "TX",
+      "listed_providers": 41,
+      "provider_stated_24_7": 36,
+      "provider_stated_insurance_direct_billing": 31,
+      "google_rated_listings": 38,
+      "google_review_total": 2518,
+      "domain_matched_google_business_locations": 40,
+      "iicrc_certified_firms": 15,
+      "official_state_mold_credentials": 7
+    },
+    {
+      "metro_slug": "orlando-fl",
+      "city": "Orlando",
+      "state": "FL",
+      "listed_providers": 84,
+      "provider_stated_24_7": 72,
+      "provider_stated_insurance_direct_billing": 46,
+      "google_rated_listings": 70,
+      "google_review_total": 6242,
+      "domain_matched_google_business_locations": 77,
+      "iicrc_certified_firms": 20,
+      "official_state_mold_credentials": 0
+    },
+    {
+      "metro_slug": "san-antonio-tx",
+      "city": "San Antonio",
+      "state": "TX",
+      "listed_providers": 33,
+      "provider_stated_24_7": 32,
+      "provider_stated_insurance_direct_billing": 29,
+      "google_rated_listings": 31,
+      "google_review_total": 2525,
+      "domain_matched_google_business_locations": 32,
+      "iicrc_certified_firms": 15,
+      "official_state_mold_credentials": 6
+    },
+    {
+      "metro_slug": "jacksonville-fl",
+      "city": "Jacksonville",
+      "state": "FL",
+      "listed_providers": 29,
+      "provider_stated_24_7": 22,
+      "provider_stated_insurance_direct_billing": 16,
+      "google_rated_listings": 26,
+      "google_review_total": 2233,
+      "domain_matched_google_business_locations": 24,
+      "iicrc_certified_firms": 10,
+      "official_state_mold_credentials": 0
+    },
+    {
+      "metro_slug": "fort-worth-tx",
+      "city": "Fort Worth",
+      "state": "TX",
+      "listed_providers": 39,
+      "provider_stated_24_7": 35,
+      "provider_stated_insurance_direct_billing": 23,
+      "google_rated_listings": 36,
+      "google_review_total": 3767,
+      "domain_matched_google_business_locations": 38,
+      "iicrc_certified_firms": 11,
+      "official_state_mold_credentials": 7
+    },
+    {
+      "metro_slug": "corpus-christi-tx",
+      "city": "Corpus Christi",
+      "state": "TX",
+      "listed_providers": 11,
+      "provider_stated_24_7": 5,
+      "provider_stated_insurance_direct_billing": 3,
+      "google_rated_listings": 8,
+      "google_review_total": 457,
+      "domain_matched_google_business_locations": 9,
+      "iicrc_certified_firms": 0,
+      "official_state_mold_credentials": 0
+    }
+  ],
+  "services": [
+    {
+      "service_slug": "water-damage-restoration",
+      "service": "Water Damage Restoration",
+      "metros_represented": 10,
+      "listed_providers": 485,
+      "provider_stated_24_7": 426,
+      "provider_stated_insurance_direct_billing": 309,
+      "google_rated_listings": 444,
+      "google_review_total": 39017,
+      "domain_matched_google_business_locations": 460,
+      "iicrc_certified_firms": 163,
+      "official_state_mold_credentials": 56
+    },
+    {
+      "service_slug": "fire-damage-restoration",
+      "service": "Fire & Smoke Damage Restoration",
+      "metros_represented": 10,
+      "listed_providers": 335,
+      "provider_stated_24_7": 303,
+      "provider_stated_insurance_direct_billing": 226,
+      "google_rated_listings": 314,
+      "google_review_total": 31597,
+      "domain_matched_google_business_locations": 319,
+      "iicrc_certified_firms": 129,
+      "official_state_mold_credentials": 42
+    },
+    {
+      "service_slug": "mold-removal",
+      "service": "Mold Removal & Remediation",
+      "metros_represented": 10,
+      "listed_providers": 395,
+      "provider_stated_24_7": 342,
+      "provider_stated_insurance_direct_billing": 230,
+      "google_rated_listings": 363,
+      "google_review_total": 36211,
+      "domain_matched_google_business_locations": 376,
+      "iicrc_certified_firms": 128,
+      "official_state_mold_credentials": 47
+    },
+    {
+      "service_slug": "storm-damage-restoration",
+      "service": "Storm Damage Restoration",
+      "metros_represented": 10,
+      "listed_providers": 164,
+      "provider_stated_24_7": 154,
+      "provider_stated_insurance_direct_billing": 124,
+      "google_rated_listings": 155,
+      "google_review_total": 15350,
+      "domain_matched_google_business_locations": 156,
+      "iicrc_certified_firms": 65,
+      "official_state_mold_credentials": 19
+    }
+  ]
+}

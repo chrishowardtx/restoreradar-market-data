@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="966" viewBox="0 0 1200 966" role="img" aria-labelledby="title description">
+  <title id="title">Provider-stated response and insurance-billing signals across RestoreRadar metros</title>
+  <desc id="description">Horizontal bars compare the share of RestoreRadar-listed provider records whose websites state 24/7 response or direct insurance billing in 10 covered metros. This observational directory dataset is not a census or a performance test.</desc>
+  <style>
+    text { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .title { fill: #f4f8ff; font-size: 34px; font-weight: 760; letter-spacing: -0.7px; }
+    .subtitle { fill: #b8cae0; font-size: 18px; }
+    .legend { fill: #dfeaf8; font-size: 15px; font-weight: 650; }
+    .city { fill: #f4f8ff; font-size: 17px; font-weight: 700; }
+    .base { fill: #91a8c2; font-size: 13px; }
+    .value { fill: #f4f8ff; font-size: 15px; font-weight: 700; }
+    .note { fill: #a7bad1; font-size: 14px; }
+    .source { fill: #dfeaf8; font-size: 14px; font-weight: 650; }
+    .track { fill: #17304b; }
+    .response { fill: #27c5ff; }
+    .insurance { fill: #ffb454; }
+  </style>
+  <rect width="1200" height="966" rx="24" fill="#071426"/>
+  <path d="M0 0H1200V7H0Z" fill="#27c5ff"/>
+  <text x="56" y="70" class="title">Public provider signals across 10 metros</text>
+  <text x="56" y="104" class="subtitle">Share of RestoreRadar-listed records with a provider-website statement · 2026-07-30</text>
+  <g transform="translate(56 142)">
+    <rect width="18" height="18" rx="5" class="response"/>
+    <text x="28" y="15" class="legend">States 24/7 response</text>
+    <rect x="250" width="18" height="18" rx="5" class="insurance"/>
+    <text x="278" y="15" class="legend">States direct insurance billing</text>
+  </g>
+  <g>
+      <text x="56" y="238" class="city">Houston, TX</text>
+      <text x="56" y="258" class="base">n=120</text>
+      <rect x="315" y="221" width="720" height="16" rx="8" class="track"/>
+      <rect x="315" y="221" width="630.0" height="16" rx="8" class="response"/>
+      <rect x="315" y="246" width="720" height="16" rx="8" class="track"/>
+      <rect x="315" y="246" width="426.0" height="16" rx="8" class="insurance"/>
+      <text x="1060" y="234" class="value">87.5%</text>
+      <text x="1060" y="259" class="value">59.2%</text>
+    </g>
+<g>
+      <text x="56" y="300" class="city">Dallas, TX</text>
+      <text x="56" y="320" class="base">n=90</text>
+      <rect x="315" y="283" width="720" height="16" rx="8" class="track"/>
+      <rect x="315" y="283" width="616.0" height="16" rx="8" class="response"/>
+      <rect x="315" y="308" width="720" height="16" rx="8" class="track"/>
+      <rect x="315" y="308" width="456.0" height="16" rx="8" class="insurance"/>
+      <text x="1060" y="296" class="value">85.6%</text>
+      <text x="1060" y="321" class="value">63.3%</text>
+    </g>
+<g>
+      <text x="56" y="362" class="city">Tampa, FL</text>
+      <text x="56" y="382" class="base">n=77</text>
+      <rect x="315" y="345" width="720" height="16" rx="8" class="track"/>
+      <rect x="315" y="345" width="626.5" height="16" rx="8" class="response"/>
+      <rect x="315" y="370" width="720" height="16" rx="8" class="track"/>
+      <rect x="315" y="370" width="430.1" height="16" rx="8" class="insurance"/>
+      <text x="1060" y="358" class="value">87.0%</text>
+      <text x="1060" y="383" class="value">59.7%</text>
+    </g>
+<g>
+      <text x="56" y="424" class="city">New Orleans, LA</text>
+      <text x="56" y="444" class="base">n=26</text>
+      <rect x="315" y="407" width="720" height="16" rx="8" class="track"/>
+      <rect x="315" y="407" width="443.1" height="16" rx="8" class="response"/>
+      <rect x="315" y="432" width="720" height="16" rx="8" class="track"/>
+      <rect x="315" y="432" width="276.9" height="16" rx="8" class="insurance"/>
+      <text x="1060" y="420" class="value">61.5%</text>
+      <text x="1060" y="445" class="value">38.5%</text>
+    </g>
+<g>
+      <text x="56" y="486" class="city">Austin, TX</text>
+      <text x="56" y="506" class="base">n=41</text>
+      <rect x="315" y="469" width="720" height="16" rx="8" class="track"/>
+      <rect x="315" y="469" width="632.2" height="16" rx="8" class="response"/>
+      <rect x="315" y="494" width="720" height="16" rx="8" class="track"/>
+      <rect x="315" y="494" width="544.4" height="16" rx="8" class="insurance"/>
+      <text x="1060" y="482" class="value">87.8%</text>
+      <text x="1060" y="507" class="value">75.6%</text>
+    </g>
+<g>
+      <text x="56" y="548" class="city">Orlando, FL</text>
+      <text x="56" y="568" class="base">n=84</text>
+      <rect x="315" y="531" width="720" height="16" rx="8" class="track"/>
+      <rect x="315" y="531" width="617.1" height="16" rx="8" class="response"/>
+      <rect x="315" y="556" width="720" height="16" rx="8" class="track"/>
+      <rect x="315" y="556" width="394.3" height="16" rx="8" class="insurance"/>
+      <text x="1060" y="544" class="value">85.7%</text>
+      <text x="1060" y="569" class="value">54.8%</text>
+    </g>
+<g>
+      <text x="56" y="610" class="city">San Antonio, TX</text>
+      <text x="56" y="630" class="base">n=33</text>
+      <rect x="315" y="593" width="720" height="16" rx="8" class="track"/>
+      <rect x="315" y="593" width="698.2" height="16" rx="8" class="response"/>
+      <rect x="315" y="618" width="720" height="16" rx="8" class="track"/>
+      <rect x="315" y="618" width="632.7" height="16" rx="8" class="insurance"/>
+      <text x="1060" y="606" class="value">97.0%</text>
+      <text x="1060" y="631" class="value">87.9%</text>
+    </g>
+<g>
+      <text x="56" y="672" class="city">Jacksonville, FL</text>
+      <text x="56" y="692" class="base">n=29</text>
+      <rect x="315" y="655" width="720" height="16" rx="8" class="track"/>
+      <rect x="315" y="655" width="546.2" height="16" rx="8" class="response"/>
+      <rect x="315" y="680" width="720" height="16" rx="8" class="track"/>
+      <rect x="315" y="680" width="397.2" height="16" rx="8" class="insurance"/>
+      <text x="1060" y="668" class="value">75.9%</text>
+      <text x="1060" y="693" class="value">55.2%</text>
+    </g>
+<g>
+      <text x="56" y="734" class="city">Fort Worth, TX</text>
+      <text x="56" y="754" class="base">n=39</text>
+      <rect x="315" y="717" width="720" height="16" rx="8" class="track"/>
+      <rect x="315" y="717" width="646.2" height="16" rx="8" class="response"/>
+      <rect x="315" y="742" width="720" height="16" rx="8" class="track"/>
+      <rect x="315" y="742" width="424.6" height="16" rx="8" class="insurance"/>
+      <text x="1060" y="730" class="value">89.7%</text>
+      <text x="1060" y="755" class="value">59.0%</text>
+    </g>
+<g>
+      <text x="56" y="796" class="city">Corpus Christi, TX</text>
+      <text x="56" y="816" class="base">n=11</text>
+      <rect x="315" y="779" width="720" height="16" rx="8" class="track"/>
+      <rect x="315" y="779" width="327.3" height="16" rx="8" class="response"/>
+      <rect x="315" y="804" width="720" height="16" rx="8" class="track"/>
+      <rect x="315" y="804" width="196.4" height="16" rx="8" class="insurance"/>
+      <text x="1060" y="792" class="value">45.5%</text>
+      <text x="1060" y="817" class="value">27.3%</text>
+    </g>
+  <line x1="56" y1="863" x2="1144" y2="863" stroke="#23415f"/>
+  <text x="56" y="896" class="note">Observational directory coverage only—not a census or performance test. Missing signals are unconfirmed, not negative findings.</text>
+  <text x="56" y="928" class="source">Source: RestoreRadar · 550 published provider records · restoreradar.com/restoration-market-data/</text>
+</svg>

@@ -5,18 +5,31 @@ type: dataset
 authors:
   - family-names: "Howard"
     given-names: "Chris"
+    affiliation: "RestoreRadar"
 version: "2026-07-30"
 date-released: 2026-07-30
 url: "https://restoreradar.com/restoration-market-data/"
 repository-code: "https://github.com/chrishowardtx/restoreradar-market-data"
+identifiers:
+  - type: url
+    value: "https://github.com/chrishowardtx/restoreradar-market-data/releases/tag/v2026-07-30"
+    description: "Stable GitHub release for the 2026-07-30 dataset snapshot."
+keywords:
+  - "disaster restoration"
+  - "water damage"
+  - "fire damage"
+  - "mold remediation"
+  - "market data"
+license-url: "https://github.com/chrishowardtx/restoreradar-market-data/blob/v2026-07-30/REUSE_TERMS.md"
 abstract: >-
   Aggregate provider-record signals across ten RestoreRadar metros. This is not a census, market-share
   estimate, quality score, or performance test; missing signals are unconfirmed rather than negative.
 preferred-citation:
-  type: dataset
+  type: data
   title: "Restoration Industry Statistics from 550 Provider Records"
   authors:
     - family-names: "Howard"
       given-names: "Chris"
+      affiliation: "RestoreRadar"
   year: 2026
   url: "https://restoreradar.com/restoration-market-data/"

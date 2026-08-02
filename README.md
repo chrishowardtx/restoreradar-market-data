@@ -43,8 +43,8 @@ classes have different scopes and must not be treated as interchangeable.
 
 ## Suggested citation
 
-> RestoreRadar, “Restoration Industry Statistics from 550 Provider Records,” updated 2026-07-30,
-> https://restoreradar.com/restoration-market-data/
+> Chris Howard, “Restoration Industry Statistics from 550 Provider Records,” RestoreRadar, updated
+> 2026-07-30, https://restoreradar.com/restoration-market-data/
 
 Include the date you accessed the files and preserve the “not a census” limitation with comparisons.
 
@@ -55,7 +55,7 @@ calendar schedule. This repository is a dated snapshot, so use the canonical rep
 version. Report suspected errors through https://restoreradar.com/contact/ or email
 hello@restoreradar.com.
 
-Publisher contact:
+Dataset producer / brand contact:
 
 - RestoreRadar
 - https://restoreradar.com/
